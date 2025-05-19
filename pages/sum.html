@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h2,h3,h4{
+            background-color: gold;
+            text-align: center;
+            width: fit-content;
+        }
+        legend{
+            color: grey;
+        }
+        label{
+            color:gold;
+        }
+        input{
+            color: black;
+        }
+        fieldset{
+            border-radius:4px;
+            border-color: aqua;
+        }
+        .print{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="print">
+
+    <h2 class="print">ADD NUMBERS</h2>
+    <fieldset>
+        <legend>NUM1</legend>
+        <label for = "num1">num1</label>
+        <input type="number" name="num1" id="num1">
+    </fieldset>
+     <br/> <br/>
+    <fieldset>
+        <legend>NUM2</legend>
+         <label for="num2">num2</label>
+         <input type="number" name="num2" id="num2">
+    </fieldset>
+    <br/> <br/>
+   
+    <input type="button" value="Calculate" onclick="add()">
+
+    <H3 class="print">THE VALUE IS : <H4 id="result">0</H4></H3>
+    <script>
+        function add()
+        {
+           let a = document.getElementById("num1").value;
+           let b = document.getElementById("num2").value;
+           let res = parseFloat(a) + parseFloat(b);
+           console.log(res);
+           document.getElementById("result").innerText=res;
+        }
+    </script>
+
+</body>
+</html>
